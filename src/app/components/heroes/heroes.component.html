@@ -5,7 +5,7 @@
 <hr>
 
 <div class="card-columns">
-  <div class="card" *ngFor="let heroe of _heroes">
+  <div class="card animated fadeIn" *ngFor="let heroe of _heroes; let i = index">
     <img class="card-img-top img-fluid" src="{{heroe.img}}" alt="{{ heroe.name }}">
     <div class="card-block">
       <h4 class="card-title"> {{ heroe.name }}</h4>
@@ -16,7 +16,8 @@
         </small>
       </p>
 
-      <button type="button" class="btn btn-outline-primary btn-block"> See more... </button>
+      <button type="button" class="btn btn-outline-primary btn-block" (click)="seeHeroProfile(i)"> See more... </button>
+      <!--<a [routerLink]="['/hero', i]" class="btn btn-outline-primary btn-block"> See more... </a>-->
     </div>
   </div>
 </div>
