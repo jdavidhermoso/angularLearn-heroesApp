@@ -5,13 +5,15 @@
 <hr>
 
 <div class="card-columns">
-  <div class="card">
-    <img class="card-img-top img-fluid" src="assets/aquaman.png" alt="Card image cap">
+  <div class="card" *ngFor="let heroe of _heroes">
+    <img class="card-img-top img-fluid" src="{{heroe.img}}" alt="{{ heroe.name }}">
     <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h4 class="card-title"> {{ heroe.name }}</h4>
+      <p class="card-text"> {{ heroe.bio }}</p>
       <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">
+          Appear in: {{ heroe.appear }}
+        </small>
       </p>
 
       <button type="button" class="btn btn-outline-primary btn-block"> See more... </button>
