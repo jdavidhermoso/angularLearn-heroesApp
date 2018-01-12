@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroComponent } from './components/heroe/hero.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HeroComponent } from './components/heroe/hero.component';
     AboutComponent,
     HeroesComponent,
     HeroComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,
