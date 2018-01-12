@@ -1,3 +1,17 @@
-<p>
-  heroe works!
-</p>
+<div class="card mb-3">
+  <img class="card-img-top" src="" alt="{{ hero.name }}">
+  <div class="card-block">
+    <h4 class="card-title">
+      {{ hero.name | uppercase }}
+    </h4>
+    <p class="card-text">
+      {{hero.bio}}
+    </p>
+    <p class="card-text">
+      <span>Appeard: </span> {{hero.appear}} | (date: 'y')
+    </p>
+    <button type="button" class="btn btn-primary" (click)="getBackToHeroes()">
+      Go back!
+    </button>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {HeroesService} from '../../services/heroes.service';
 import {Hero} from '../../interfaces/heroes.interface';
 import {Router} from '@angular/router';
@@ -8,17 +8,12 @@ import {Router} from '@angular/router';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent {
 
   private _heroes: Hero[] = [];
 
   constructor(private _heroesService: HeroesService, private _router: Router) {
-    console.log('Heroes Service Constructor!');
-  }
-
-  ngOnInit() {
-    this._heroes = this._heroesService.getHeroes();
-    console.log(this._heroes);
+    this._heroes = _heroesService.getHeroes();
   }
 
   seeHeroProfile(idx: number) {
