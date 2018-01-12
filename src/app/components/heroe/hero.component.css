@@ -1,0 +1,18 @@
+.ha-hero-image-container {
+  height: 200px
+}
+
+.ha-hero-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.ha-hero-company-container {
+  width: 100px;
+}
+
+.ha-hero-company-image {
+  max-width: 100%;
+}
+

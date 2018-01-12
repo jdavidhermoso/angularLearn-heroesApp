@@ -1,17 +1,21 @@
-<div class="card mb-3">
-  <img class="card-img-top" src="" alt="{{ hero.name }}">
-  <div class="card-block">
-    <h4 class="card-title">
-      {{ hero.name | uppercase }}
-    </h4>
-    <p class="card-text">
+<div class="row">
+  <div class="col-md-3">
+    <div class="ha-hero-image-container">
+      <img class="ha-hero-image" src="{{hero.img}}" alt="{{hero.name}}">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <h2>
+      {{hero.name | uppercase }}
+    </h2>
+    <p>
       {{hero.bio}}
     </p>
-    <p class="card-text">
-      <span>Appeard: </span> {{hero.appear}} | (date: 'y')
+    <p>
+      {{hero.name}} appeared in {{hero.appear | date: 'y'}}
     </p>
-    <button type="button" class="btn btn-primary" (click)="getBackToHeroes()">
-      Go back!
-    </button>
+    <div class="ha-hero-company-container">
+      <img class="ha-hero-company-image" src="assets/{{hero.house | lowercase}}.jpg" />
+    </div>
   </div>
 </div>
