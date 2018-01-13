@@ -12,10 +12,9 @@ export class HeroComponent {
   @Input() hero: Hero;
 
   constructor(private _activatedRouter: ActivatedRoute, private _heroesService: HeroesService, private _router: Router) {
-    console.log('aaa');
-    // this._activatedRouter.params.subscribe(params => {
-    //   this.hero = this._heroesService.getHero(params['id']);
-    // });
+    this._activatedRouter.params.subscribe(params => {
+      this.hero = this._heroesService.getHero(params['id']);
+    });
   }
 
   getBackToHeroes() {

@@ -5,11 +5,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-results',
-  templateUrl: './search-results.component.html',
+  template: `<app-heroe *ngFor="let hero of heroes" [hero]="hero">
+  </app-heroe>`,
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  private heroes: Hero[];
+  heroes: Hero[];
   private _searchedHero: string;
 
   constructor(private _activatedRoute: ActivatedRoute, private heroesService: HeroesService, private _router: Router) {
@@ -20,7 +21,6 @@ export class SearchResultsComponent implements OnInit {
 
   ngOnInit() {
     this.heroes = this.heroesService.searchHeroes(this._searchedHero);
-    console.log(this.heroes);
   }
 
 }
