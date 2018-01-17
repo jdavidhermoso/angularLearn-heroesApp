@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {HeroesService} from '../../services/heroes.service';
 import {Hero} from '../../interfaces/heroes.interface';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
@@ -9,11 +9,14 @@ import {Router} from '@angular/router';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent {
-
   private _heroes: Hero[] = [];
+  private _searchedHero: string = '';
 
-  constructor(private _heroesService: HeroesService, private _router: Router) {
-    this._heroes = _heroesService.getHeroes();
+  constructor(private _activatedRoute: ActivatedRoute, private _heroesService: HeroesService, private _router: Router) {
+    this._activatedRoute.params.subscribe(params => {
+      this._searchedHero = params['searchedHero'];
+      this._heroes = _heroesService.getHeroes(this._searchedHero);
+    });
   }
 
   seeHeroProfile(idx: number) {

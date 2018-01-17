@@ -4,7 +4,6 @@ import {Hero} from '../interfaces/heroes.interface';
 @Injectable()
 export class HeroesService {
   constructor() {
-    console.log('Service ready!');
   }
 
   private _heroes: Hero[] = [
@@ -59,8 +58,8 @@ export class HeroesService {
     }
   ];
 
-  getHeroes(): Hero[] {
-    return this._heroes;
+  getHeroes(searchedHero?: string): Hero[] {
+    return searchedHero ? this.searchHeroes(searchedHero) : this._heroes;
   }
 
   getHero(heroId) {
@@ -72,7 +71,7 @@ export class HeroesService {
     wordSearched = wordSearched.toLowerCase();
 
     for (let hero of this._heroes) {
-      var name = hero.name.toLowerCase();
+      let name = hero.name.toLowerCase();
       if (name.indexOf(wordSearched) !== -1) {
         heroesArr.push(hero);
       }

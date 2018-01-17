@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import {APP_ROUTING} from './app.routes';
 
 // Services
-import { HeroesService} from "./services/heroes.service";
+import { HeroesService} from './services/heroes.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -14,8 +14,6 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroComponent } from './components/heroe/hero.component';
-import { SearchResultsComponent } from './components/search-results/search-results.component';
-
 
 @NgModule({
   declarations: [
@@ -24,8 +22,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroComponent,
-    SearchResultsComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,

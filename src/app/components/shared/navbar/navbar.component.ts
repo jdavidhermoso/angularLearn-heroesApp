@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private _heroesService: HeroesService, private _router: Router) {
+  constructor(private _router: Router) {
   }
 
   ngOnInit() {
   }
 
   searchHero(wordSearched: string) {
-    this._router.navigate(['/searchHeroes/', wordSearched]);
+    this._router.navigate(['/heroes', wordSearched]);
   }
 }
