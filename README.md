@@ -5,7 +5,7 @@ I am taking the following Udemy Angular Course: https://www.udemy.com/angular-2-
 
 This repo contains a heroes app created with learning purposes.
 
-##Demo
+## Demo
 You can check the app here:
 http://angularheroesapp.juandavidhermoso.es
 
