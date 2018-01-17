@@ -1,6 +1,14 @@
 # HeroesApp
 
-I am using this repo to this Udemy Angular Course: https://www.udemy.com/angular-2-fernando-herrera/
+#Why this repo?
+I am taking the following Udemy Angular Course: https://www.udemy.com/angular-2-fernando-herrera/
+
+This repo contains a heroes app created with learning purposes.
+
+##Demo
+You can check the app here:
+http://angularheroesapp.juandavidhermoso.es
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
