@@ -9,8 +9,8 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent {
-  private _heroes: Hero[] = [];
-  private _searchedHero: string = '';
+  _heroes: Hero[] = [];
+  _searchedHero = '';
 
   constructor(private _activatedRoute: ActivatedRoute, private _heroesService: HeroesService, private _router: Router) {
     this._activatedRoute.params.subscribe(params => {

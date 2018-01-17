@@ -4,20 +4,21 @@
 </h2>
 <hr>
 
-<div class="card-columns">
-  <div class="card animated fadeIn" *ngFor="let hero of _heroes; let i = index">
-    <img class="card-img-top img-fluid" src="{{hero.img}}" alt="{{ hero.name }}">
-    <div class="card-block">
-      <h4 class="card-title"> {{ hero.name }}</h4>
-      <p class="card-text"> {{ hero.bio }}</p>
-      <p class="card-text">
-        <small class="text-muted">
-          Appear in: {{ hero.appear }}
-        </small>
-      </p>
+<div class="alert alert-danger" role="alert" *ngIf="!_heroes.length">
+  <p class="mb-0 text-center text-md-left"> <strong>Not this time!</strong> Any {{_searchedHero | uppercase}} hero was found here! Are you sure does it exist? </p>
+</div>
 
-      <button type="button" class="btn btn-outline-primary btn-block ha-btn" (click)="seeHeroProfile(i)"> See more... </button>
-      <!--<a [routerLink]="['/hero', i]" class="btn btn-outline-primary btn-block"> See more... </a>-->
+<div class="card-columns row">
+  <div class="col-md-3" *ngFor="let hero of _heroes; let i = index">
+    <div class="card animated fadeIn">
+      <img class="card-img-top img-fluid ha-heroes-img mt-3" src="{{hero.img}}" alt="{{ hero.name }}">
+      <div class="card-block">
+        <h4 class="card-title text-center my-3"> {{ hero.name }}</h4>
+
+        <button type="button" class="btn btn-outline-primary btn-block ha-btn" (click)="seeHeroProfile(i)"> Read
+          more...
+        </button>
+      </div>
     </div>
   </div>
 </div>
